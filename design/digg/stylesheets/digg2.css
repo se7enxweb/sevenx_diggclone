@@ -1,0 +1,1675 @@
+/***** Main Template *****/
+body {
+	font-family: sans-serif;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+}
+
+body, td, th, h3 { /* redundant rules for bad browsers  */
+	font-size:    x-small;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	font-size:    small
+} .clear-hack { display: none; }
+
+#container {
+	margin: 0 auto;
+	padding: 0 4% 3em 4%;
+	min-width: 600px;
+	max-width: 1000px;
+}
+
+#contents {
+	width: 72%;
+	float: right;
+	padding-bottom: 5em;
+}
+#contents-user {
+	width: 72%;
+	float: right;
+	position: relative;
+	clear: both;
+}
+#contents-wide {
+	width: 100%;
+	clear: both;
+	margin-top: 0;
+	padding-top: 0; 
+}
+div#contents-wide {
+	position: relative;
+	top:-1.8em;
+/* only for IE */ *
+	top:-2.8em;
+}
+#image_upload {
+	width: 100%;
+	float: left;
+}
+
+#sidebar {
+	width: 29%;
+	float: right;
+	background: #fff; /* to cover adwords at small sizes */
+	/* margin-right: 3%; */
+	/* padding-right: 3%; */
+	padding-left: 3%; 
+	padding-bottom: 1em;
+}
+
+#home #contents, #post #contents {
+	width: 71%;
+	float: left;
+	margin-right: 3%;
+	overflow: hidden;
+}
+
+#home #sidebar, #post #sidebar {
+	width: 25%;
+	float: left;
+	margin: 0;
+}
+
+/***** Common Content Formatting *****/
+
+a {
+	color: #06c;
+}
+
+a:hover, a:focus {
+	color: #003;
+}
+
+a:active {
+	color: #000;
+}
+
+.simple:link, .simple:visited {
+	text-decoration: none;
+	color: #666;
+}
+
+.simple:hover, .simple:active {
+	color: #333;
+	text-decoration: underline;
+}
+
+hr {
+	height: 1px;
+	background: #ccc;
+	border: none;
+}
+
+.tight {
+	white-space: nowrap;
+}
+
+img {
+	border: none;
+}
+
+p {
+	line-height: 130%;
+}
+
+li {
+	margin-bottom: 1em;
+}
+
+form {
+	margin: 0;
+}
+
+.na {
+	color: #999;
+	font-weight: normal;
+}
+
+h2 {
+	margin-top: 0;
+	margin-bottom: 0.2em;
+	font-size: 160%;
+	font-weight: normal;
+	clear: left;
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/underline.png) repeat-x 0 95%;
+}
+
+h2 + p, h3 + p, h4 + p, h5 + p, div > p, fieldset p {
+	margin-top: 0;
+}
+
+h2 .user-photo {
+	border: 1px solid #ccc;
+	float: left;
+	margin-right: 5px;
+}
+
+h3 {
+	margin-top: 0;
+	margin-bottom: 0.2em;
+	font-size: 140%;
+	font-weight: normal;
+	clear: left;
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/underline.png) repeat-x 0 95%;
+}
+
+h4 {
+	font-size: 100%;
+	font-weight: bold;
+	margin-bottom: 0.2em;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom: 1em;
+	clear: both;
+}
+
+table img {
+	border: 1px solid #ccc;
+}
+
+th, td {
+	text-align: left;
+	font-size: 85%;
+	padding: 0.4em;
+	border-bottom: 1px solid #ddd;
+}
+
+th.short, td.short {
+	text-align: center;
+}
+
+th.short a, td.short a {
+	text-decoration: none;
+	display: block;
+	padding: 0.2em 0;
+	border: 1px solid #fff;
+}
+
+th.short a:hover, td.short a:hover {
+	text-decoration: underline;
+	border: 1px solid #06c;
+	background: #fff;
+}
+
+tr:hover td {
+	background: #E8ECF4;
+}
+
+th a.info, th a:hover.info {
+	padding: 0 12px 0 0;
+	display: inline;
+	border: none;
+}
+
+th img {
+	border: none;
+	margin-right: 1px;
+	vertical-align: middle;
+}
+
+th span.info_s {
+        background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/down.gif) 100% 4px no-repeat;
+        padding: 0 12px 0 0;
+        color: #333;
+        text-decoration: none;
+        border: none;
+}
+
+td.count {
+	font-size: 140%;
+	text-align: right;
+}
+
+.form-note {
+	font-size: 85%;
+	color: #666;
+	margin-bottom: 0.3em;
+}
+
+.form-error {
+	color: #900;
+	font-size: 85%;
+	font-weight: bold;
+	margin-bottom: 1em;
+	position: relative;
+	top: -0.8em;
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/error.gif) no-repeat;
+	padding: 2px 0 4px 18px;
+}
+
+.form-full {
+	width: 100%;
+}
+
+#google {
+	margin: 1em 0;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	height: 90px;
+}
+
+#google-broad {
+	margin: 0.5em 0 1em 0;
+	height: 99px;
+	padding-left: 10px;
+	background: #F5F7FA url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/google-back-99.png) 0 0 no-repeat;
+	border: none;
+	margin-right: 7px;
+}
+
+#google-broad div {
+	height: 94px;
+	padding-top: 5px;
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/google-back-99.png) 100% 0 no-repeat;
+	overflow: hidden;
+}
+
+#google-side {
+	position: absolute; /* seems to stop FX flickering */
+	margin: 1em 0;
+	height: 160px;
+	padding-left: 5px;
+	background: #F5F7FA url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/google-back-160.png) 0 0 no-repeat;
+	border: none;
+}
+
+#google-side div {
+	height: 155px;
+	padding-top: 5px;
+	padding-right: 5px;
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/google-back-160.png) 100% 0 no-repeat;
+	overflow: hidden;
+}
+#google-side-long {
+	position: absolute; /* seems to stop FX flickering */
+	margin: 1em 0;
+	height: 615px;
+	padding-left: 5px;
+	background: #F5F7FA url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/google-back-615.png) 0 0 no-repeat;
+	border: none;
+}
+
+#google-side-long div {
+	height: 610px;
+	padding-top: 5px;
+	padding-right: 5px;
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/google-back-615.png) 100% 0 no-repeat;
+	overflow: hidden;
+}
+
+.note-temp, .boxed  {
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/digg-box-3.gif) bottom right;
+	position: relative;
+}
+
+.note-temp {
+	margin-bottom: 1em;
+}
+
+.note-temp p, .note-temp div {
+	padding: 1em 1.2em 0.7em 1.2em;
+	margin: 0;
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/digg-box-3.gif) top left;
+}
+
+* html #sidebar .note-temp p {
+	background-position: 0 1px;
+}
+
+.boxed div {
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/digg-box-3.gif) top left;
+	padding: 0.5em 1em 0.7em 1em;
+}
+
+.note-temp a.toggle, .note-temp p.toggle {
+	position: absolute;
+	top: -7px;
+	right: 5px;
+	background: #fff;
+	padding: 2px 10px 5px 10px;
+	color: #390;
+	font-size: 85%;
+}
+.note-temp a.toggleoff {
+	position: absolute;
+	top: -7px;
+	right: 5px;
+	background: #fff;
+	color: #390;
+	font-size: 85%;
+	padding: 2px 30px 5px 10px;
+}
+
+.confirm {
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/confirm.png) no-repeat 0 50%;
+	padding-left: 15px;
+	color: #390;
+}
+
+.confirm:hover {
+	color: #030;
+}
+
+.deny {
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/deny.png) no-repeat 0 50%;
+	padding-left: 15px;
+	color: #c00;
+}
+
+.deny:hover {
+	color: #900;
+}
+
+.add {
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/add.png) no-repeat 1px 1px;
+	padding-left: 18px;
+	color: #390;
+}
+
+.add:hover {
+	background-position: 1px -99px;
+	color: #030;
+}
+
+#search-friends {
+	width: 60%;
+}
+
+#digger-search {
+	float: right;
+	font-size: 85%;
+}
+
+#digger-search input {
+	font-size: 85%;
+}
+
+#digger-search #search-diggers {
+	width: 10em;
+}
+
+.instruction {
+	background: #EAF2FA url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/feature-box.png) 0 0 no-repeat;
+	margin-bottom: 1em;
+	color: #2C3D4E;
+}
+
+.instruction div {
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/feature-box.png) 100% 100% no-repeat;
+	padding: 1em;
+}
+
+.instruction h3 {
+	background: none;
+}
+
+.instruction-list {
+	margin: 0;
+	padding: 0;
+}
+
+.instruction-list li {
+	list-style: none;
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/important.png) no-repeat 7px 11px;
+	margin: 0;
+	padding: 10px 0 10px 25px;
+}
+
+.instruction-list .instruction-search {
+	background-image: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/important-search.png);
+}
+
+.instruction-list .instruction-link {
+	background-image: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/important-link.png);
+}
+
+.instruction-list .instruction-write {
+	background-image: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/important-write.png);
+}
+
+/***** Header *****/
+
+#header {
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/header-back.png) bottom right;
+	height: 47px;
+	color: #fff;
+	position: relative;
+	margin-right: 1%;
+	padding-right: 3px;
+}
+
+#home #header {
+	margin-bottom: 0.5em;
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/header-back-home.png) bottom right;
+}
+
+#header a {
+	color: #fff;
+}
+
+#header a:hover {
+	color: #D2DCF3;
+}
+
+#header ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#header li {
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+
+#header li a, #header li a:visited, #header form {
+	display: block;
+	float: left;
+	font-weight: bold;
+	padding: 14px 1.5em 0 1.5em;
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/header-menu-back.png) no-repeat 0 -100px;
+	height: 27px;
+	font-size: 85%;
+}
+
+#style-switcher {
+	float: right;
+	position: relative;
+	bottom: 4px;
+	right: 7px;
+}
+
+#style-switcher a#normal {
+	display: none;
+}
+
+#style-switcher a#compact {
+	display: block;
+}
+
+#header form {
+	padding-top: 12px;
+	height: 29px;
+}
+
+#header li a:hover, #header li a:active, #style-switcher a:hover, #style-switcher a:active {
+	background-position: 0 0;
+}
+
+#header h1 {
+	font-size: 100%;
+	margin: 0;
+}
+
+#header h1 a, #header h1 span {
+	display: block;
+	height: 47px;
+	width: 60px;
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/logo.png) bottom left no-repeat;
+	text-indent: -2000em;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-decoration: none;
+	z-index: 1000; /* need for FX and IE */
+}
+#home h1 a {
+        background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/logo-home.png) bottom left no-repeat;
+}
+
+#header form input {
+	margin: 0;
+	font-size: 85%;
+	opacity: .7;
+	width: 10em;
+	color: #145693;
+}
+
+#header label.inside {
+	color: #145693;
+	position:absolute;
+	visibility:hidden;
+}
+
+#header form input:focus, #header form input:hover {
+	opacity: 1;
+	color: #000;
+}
+
+#header #search-submit {
+	display: none;
+}
+
+/* only for IE */ * html #header h1 a, * html #header h1 span {
+	bottom: -1px;
+}
+
+#header h1 span {
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/logo-home.png) bottom left no-repeat;
+}
+
+#nav-string {
+	background: #F1E49F url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/string-first.png) left bottom no-repeat;
+	margin: 0 27px 1.5em 23px;
+	font-size: 85%;
+	color: #988C39;
+	text-transform: lowercase;
+	padding-left: 10px;
+	z-index: 2000;
+}
+
+#nav-string div {
+	background: url(https://web.archive.org/web/20051204025122im_/http://www.digg.com/img/string-second.png) right bottom no-repeat;
+	padding: 0 10px 5px 0;
+}
+
+#nav-string a {
+	color: #73681F;
+}
+
+#nav-string a:hover {
+	color: #524A12;
+}
+
+/***** Footer *****/
+
+#footer {
+	clear: both;
+	padding: 0 0 2em 0;
+	font-size: 11px;
+	text-align: center;
+}
+
+#footer ul {
+	border-top: 1px solid #ccc;
+	margin: 0;
+	padding: 1em 0 0 0;
+	list-style: none;
+}
+
+#footer li {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#footer li a, #footer li span {
+	display: block;
+	float: left;
+	padding: 5px 1em;
+	border-right: 1px solid #ccc;
+}
+
+#footer li span.copyright {
+	border-right: none;
+}
+
+/***** News Articles *****/
+
+.news-summary, .news-short-summary, .news-full, .news-full-confirm {
+	/* padding: 1.5em 0 2em 0; */
+	position: relative; /* this makes the "problem menu" transparent in IE */
+	float: left;
+}
+
+.news-short-summary {
+	border-bottom-color: #eee;
+	padding-bottom: 2.5em;
+	padding-top: 0.5em;
+}
+
+.news-full, .news-full-confirm {
+	padding: 1px 0 2em 0; /* need 1px top padding for IE */
+}
+
+.news-body {
+	padding-left: 0.3rem;
+}
+
+.news-full-confirm .news-body {
+	padding-left: 0;
+}
+
+.news-short-summary .news-body {
+	padding-left: 3.8em;
+}
+
+.news-digg {
+/*	position: absolute; */
+	top: 1.8em;
+	left: 0;
+	width: 4.3em;
+	text-align: center;
+	font-size: 85%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	list-style-type: none;
+}
+
+.news-digg li {
+	list-style: none;
+	list-style-type: none;
+}
+
+.news-short-summary .news-digg {
+	top: 0.4em;
+	width: 3.7em;
+}
+
+.news-full .news-digg {
+	top: 0;
+	left: 0;
+}
+
+.news-digg li {
+	border: 1px solid #fff; /* fixes IE margin bug */
+	margin: 0;
+	padding: 0;
+}
+.shade-1 { background: #FFF299 url(/extension/sevenx_digg/design/digg/images/digg/digg-box-1-shade-1.png); }
+.shade-1 a { background: url(/extension/sevenx_digg/design/digg/images/digg/digg-box-1-shade-1.png) bottom right; color: #A39A5D; }
+
+.shade-2 { background: #FFF299 url(/extension/sevenx_digg/design/digg/images/digg/digg-box-1-shade-2.png); }
+.shade-2 a { background: url(/extension/sevenx_digg/design/digg/images/digg/digg-box-1-shade-2.png) bottom right; color: #998D43; }
+
+.shade-3 { background: #FFF299 url(/extension/sevenx_digg/design/digg/images/digg/digg-box-1-shade-3.png); }
+.shade-3 a { background: url(/extension/sevenx_digg/design/digg/images/digg/digg-box-1-shade-3.png) bottom right; color: #897D2F; }
+
+.shade-4 { background: #FFF299 url(/extension/sevenx_digg/design/digg/images/digg/digg-box-1-shade-4.png); }
+.shade-4 a { background: url(/extension/sevenx_digg/design/digg/images/digg/digg-box-1-shade-4.png) bottom right; color: #73681F; }
+
+.shade-5 { background: #FFF299 url(/extension/sevenx_digg/design/digg/images/digg/digg-box-1-shade-5.png); }
+.shade-5 a { background: url(/extension/sevenx_digg/design/digg/images/digg/digg-box-1-shade-5.png) bottom right; color: #50470D; }
+
+.shade-1, .shade-2, .shade-3, .shade-4, .shade-5 .shade6 { background-position: 1px 1px; }
+.news-digg > .shade-1, .news-digg > .shade-2, .news-digg > .shade-3, .news-digg > .shade-4, .news-digg > .shade-5 { background-position: 0 0; } /* hack for rendering issue in IE */
+
+.digg-count a , .digg-count-s a {
+	display: block;
+	padding: 0.5em 0;
+	text-decoration: none;
+	margin-bottom: 0;
+}
+
+.digg-count a:hover,  .digg-count-s a:hover{
+	color: #3C3508;
+}
+
+.digg-count a:first-line {
+	font-size: 190%;
+	letter-spacing: -1px;
+}
+
+.digg-count-s a:first-line {
+	font-size: 130%;
+	font-weight: bold;
+}
+/* this breaks hover on top dropdown in IE */
+.news-short-summary .digg-count a:first-line {
+	font-size: 130%;
+	font-weight: bold;
+}
+
+.digg-count img,  .digg-count-s img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: none;
+}
+
+.digg-it {
+	background: url(/extension/sevenx_digg/design/digg/images/digg/digg-box-2.png) 0 0;
+}
+ /* only for IE */ * html .digg-it {
+	background: url(/extension/sevenx_digg/design/digg/images/digg/digg-box-2.png) 1px 1px;
+}
+
+.digg-it a, .digg-it span {
+	display: block;
+	padding: 5px 0 7px 0;
+	background: url(/extension/sevenx_digg/design/digg/images/digg/digg-box-2.png) bottom right;
+}
+
+.digg-it span {
+	color: #999;
+}
+
+.undigg-it {
+	background: url(/extension/sevenx_digg/design/digg/images/digg/digg-box-2.png) 0 0;
+}
+ /* only for IE */ * html .digg-it {
+	background: url(/extension/sevenx_digg/design/digg/images/digg/digg-box-2.png) 1px 1px;
+}
+
+.undigg-it a, .undigg-it span {
+	display: block;
+	padding: 5px 0 7px 0;
+	background: url(/extension/sevenx_digg/design/digg/images/digg/digg-box-2.png) bottom right;
+}
+
+.undigg-it span {
+	color: #999;
+}
+
+.news-short-summary .digg-it a, .news-short-summary .digg-it span {
+	padding: 3px 0 5px 0;
+}
+
+.news-body h3 {
+	margin: 0;
+	font-size: 140%;
+	font-weight: normal;
+	background: none;
+}
+
+.news-short-summary .news-body h3 {
+	font-size: 100%;
+	font-weight: bold;
+	margin-bottom: 2px;
+	background: none;
+}
+
+.news-body p {
+	margin: 0.3em 0 0.1em 0;
+}
+
+.news-full .news-body p {
+	margin: 0.3em 0 1em 0;
+}
+
+.news-summary .news-body .read-more {
+	font-size: 85%;
+	font-weight: bold;
+}
+.news-short-summary .news-body .read-more {
+	font-size: 85%;
+	font-weight: bold;
+}
+
+.news-submitted {
+	padding: 0 0 0 0.1rem;
+	color: #666;
+	font-size: 85%;
+	margin: 0;
+}
+
+.news-submitted a:link, .news-submitted a:visited {
+	color: #666;
+}
+
+.news-submitted a:hover {
+	color: #333;
+}
+
+.news-submitted img {
+	border: 1px solid #ccc;
+	vertical-align: middle;
+}
+
+/***** Side Menu *****/
+
+.main-menu, .column-list {
+	list-style: none;
+	margin: 0.5em 0 1em 0;
+	padding: 0;
+}
+
+.main-menu li a, .main-menu li.menu-item span, .column-list li span  {
+	display: block;
+	padding: 0.5em 0.7em 0.7em 0.7em;
+	background: url(/extension/sevenx_digg/design/digg/images/digg/digg-box-2.png) bottom right no-repeat;
+}
+
+.main-menu li.menu-item span a {
+	background: none;
+	padding: 0 0 0 0.2em;
+	display: inline;
+}
+
+.main-menu li {
+	clear: left;
+	margin: 0 0 0.3em 0;
+	background: #fff url(/extension/sevenx_digg/design/digg/images/digg/digg-box-2.png) top left no-repeat;
+	border-bottom: 1px solid #fff; /* need for IE */
+}
+
+.main-menu li.side-boxed {
+	background: none;
+}
+
+.main-menu li.side-boxed span {
+	padding: 0;
+}
+
+.main-menu li#main-digg {
+	background: #9DEB60 url(/extension/sevenx_digg/design/digg/images/digg/digg-box-4.png) top left no-repeat;
+	position: relative;
+}
+
+.main-menu li#main-digg a {
+	background: url(/extension/sevenx_digg/design/digg/images/digg/digg-box-4.png) bottom right no-repeat;
+	color: #35581a;
+	font-size: 140%;
+	font-weight: normal;
+	padding-right: 40px;
+}
+
+.main-menu li#main-digg a:hover {
+	color: #000;
+}
+
+.main-menu li#main-submit a {
+	font-size: 140%;
+}
+
+.main-menu li#main-digg img {
+	position: absolute;
+	top: -5px;
+	right: -8px;
+}
+
+.main-menu li span {
+	display: block;
+	padding-top: 0.4em;
+}
+
+.main-menu #search {
+	width: 8em;
+}
+
+.rss {
+	display: block;
+	margin-top: 1em;
+	padding-left: 0.6em;
+}
+
+.rss img {
+	vertical-align: middle;
+	padding-left: 0.2em;
+	text-decoration: none;
+}
+
+/***** Side Lists *****/
+
+.column-list li {
+	float: left;
+	width: 7em;
+	margin: 0;
+	padding: 0 0 0.8em 0;
+	font-size: 85%;
+	background: #fff;
+}
+
+.column-list li a, .column-list li span, .category-list li a, .category-list li span {
+	background: none;
+	display: inline;
+	padding: 0;
+}
+
+.column-list li a {
+	background: #fff url(/extension/sevenx_digg/design/digg/images/digg/category.png) no-repeat 4px 0px;
+	padding-left: 20px;
+	width: 100%;
+}
+
+.column-list li a:hover {
+	background-position: 4px -100px;
+}
+
+.column-list li, .category-list li {
+	clear: none;
+}
+
+.category-list {
+	margin: 0.5em 0 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.category-list li {
+	margin: 0;
+	padding: 0;
+	font-size: 85%;
+	background: #fff;
+	color: #666;
+}
+
+.category-list li a, .category-list li span {
+	padding: 6px 0 6px 20px !important;
+	display: block;
+	border-top: 1px solid #ddd;
+	background: url(/extension/sevenx_digg/design/digg/images/digg/category.png) no-repeat 2px 6px !important;
+}
+
+* html .category-list li a, * html .category-list li span {
+	/*IE only hack*/ width: 87%; padding-left: 13%;
+}
+
+.category-list li a:hover {
+	background-position: 2px -94px;
+}
+
+.category-list li.current span {
+	border-top: 1px solid #f66;
+	font-weight: bold;
+	color: #333;
+}
+
+.category-list li.current {
+	border-bottom: 1px solid #f66;
+	background: url(/extension/sevenx_digg/design/digg/images/digg/category-selected.gif) 100% 50% no-repeat;
+
+}
+.sort-diggs label {
+	width: 4em;
+	display: block;
+	float: left;
+	padding-top: 0.3em; /* centers with select box */
+}
+
+* html .sort-diggs label {
+	/* IE only hack */ display: inline-block; float: none;
+}
+
+.sort-diggs select {
+	font-size: 11px;
+	margin: 0.2em 0;
+}
+
+.sort-diggs select {
+	vertical-align: middle;
+}
+
+/***** "Dugg By" List *****/
+
+#diggers, #comments {
+	margin: 2em 0 0 4em;
+}
+
+ul.user-list {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 10px;
+}
+
+ul.user-list li {
+	width: 14em;
+	float: left;
+	font-size: 85%;
+	padding-bottom: 0.5em;
+}
+
+ul.user-list li img {
+	border: 1px solid #ccc;
+	vertical-align: middle;
+	margin-right: 3px;
+}
+
+#comments, #diggers {
+	clear: left;
+}
+
+/***** Up and Down Vote List  *****/
+
+.vote-list {
+	clear: both;
+	padding: 2em 0 0 4em;
+}
+
+.vote-list .vote-count {
+	font-size: 85%;
+	float: right;
+}
+
+.vote-list ul {	
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+/*
+.vote-list ul li.vote-positive, .vote-list ul li.vote-negative {
+	margin: 1em 0;
+	padding-left: 20px;
+	background: url(/extension/sevenx_digg/design/digg/images/digg/vote-up.gif) 0 0 no-repeat;
+}
+
+.vote-list ul li.vote-negative {
+	background-image: url(/extension/sevenx_digg/design/digg/images/digg/vote-down.gif);
+}
+*/
+.vote-list textarea {
+	width: 100%;
+}
+
+/***** "Blogged By" List  *****/
+
+#blogged h2 {
+	margin-top: 0;
+}
+
+#blogged ul {
+	margin: 1em 0;
+	padding: 0;
+}
+
+#blogged li {
+	margin: 0;
+	padding: 0.5em 0 0 0;
+	list-style: none;
+	clear: left;
+	overflow: hidden;
+	width: 100%; /* need width for IE */
+	font-size: 85%;
+}
+
+#blogged a {
+	padding-bottom: 0.1em;
+}
+
+#blogged li img {
+	float: left;
+	margin: 0 0.5em 0.5em 0;
+	border: 1px solid #ccc;
+}
+
+/***** friends styles *****/
+
+.friends-wannabe {
+	margin-bottom: 1em;
+}
+
+.friends-wannabe img {
+	float: left;
+	border: 1px solid #ccc;
+	margin: 0 0.5em 1em 0;
+}
+
+/***** comments *****/
+
+#comments textarea {
+	width: 100%;
+	height: 8em;
+}
+
+#comments-list {
+	list-style: none;
+	margin: 1em 0 0 0;
+	padding: 0;
+}
+
+#comments-list li {
+	clear: left;
+	margin-bottom: 1em;
+	background: #FCF3BF url(/extension/sevenx_digg/design/digg/images/digg/comment-box.png) 0 0 no-repeat;
+}
+
+#comments-list .comment-body {
+	background: url(/extension/sevenx_digg/design/digg/images/digg/comment-box-side.png) 100% 0 repeat-y;
+	padding: 10px 50px 10px 10px;
+	color: #443B06;
+	line-height: 130%;
+	overflow: hidden;
+}
+
+#comments-list .comment-info {
+	font-size: 85%;
+	line-height: 160%;
+	text-align: right;
+	background: url(/extension/sevenx_digg/design/digg/images/digg/comment-box.png) 100% 100% no-repeat;
+	padding: 0 10px 15px 0;
+	color: #807953;
+}
+
+#comments-list .user-photo {
+	float: right;
+	margin-left: 5px;
+	border: 1px solid #ccc;
+	position: relative;
+	bottom: 15px;
+}
+
+#comments-list ul li {
+	list-style: none;
+	margin: 0 0 1em 0;
+}
+
+#comments-list ul {
+	margin: 0;
+	padding: 1em 0 0 3em;
+	background: #fff;
+}
+
+#comments .comment-info select {
+	font-size: 85%;
+}
+
+#tolerance, #tolerance select {
+	font-size: 85%;	
+}
+
+/***** fieldsets *****/
+
+fieldset {
+	border: none;
+	border-left: 1px solid #8AE25E;
+	border-top: 1px solid #8AE25E;
+	padding: 1em 1.5em;
+	margin: 1em 0;
+	background: url(/extension/sevenx_digg/design/digg/images/digg/digg-box-3.gif) bottom right no-repeat;
+}
+ /* only for IE */ * html fieldset {
+	border: 1px solid #8AE25E;
+	background: none;
+}
+
+legend {
+	font-weight: bold;
+	padding: 0 0.5em;
+	color: #499722;
+}
+
+fieldset dl {
+	margin: 0;
+	padding: 0;
+}
+
+fieldset dt {
+	clear: left;
+	float: left;
+	width: 18em; /* increase for wider dt text */
+	text-align: right;
+	padding: 0 1em 0.5em 0;
+}
+
+fieldset dd {
+	padding: 0 0 0.5em 0;
+	font-weight: bold;
+}
+
+label {
+	font-weight: bold;
+}
+
+fieldset.labels label {
+	width: 10em;
+	float: left;
+	text-align: right;
+	display: block;
+	padding: 0.2em 0.5em 0.2em 0;
+}
+
+fieldset.labels div {
+	padding: 0.2em 0;
+	clear: left
+}
+
+/***** tabbed navigation *****/
+
+#sub-nav, .extra-nav {
+	margin-bottom: 2em;
+	width: 100%;
+	background: url(/extension/sevenx_digg/design/digg/images/digg/tab-line.png) bottom repeat-x;
+	overflow: auto;
+}
+
+#sub-nav br, #sub-nav-2 br, .boxed br, .extra-nav br {
+	clear: both;
+}
+
+#sub-nav h2, .extra-nav h2 {
+	background: none;
+}
+
+#sub-nav ul, .extra-nav ul {
+	margin: 0.5em 0 0 0;
+	padding: 0 0 0 1em;
+	list-style: none;
+	font-size: 85%;
+}
+
+#sub-nav li, .extra-nav li {
+	margin: 0 1px 0 0;
+	padding: 0 5px 0 0;
+	background: url(/extension/sevenx_digg/design/digg/images/digg/tab-back.png) 100% -200px;
+	float: left;
+	border-bottom: 1px solid #4B87C3;
+}
+
+.extra-nav {
+	padding-right: 20px;
+}
+
+.extra-nav li {
+	float: right;
+}
+
+.extra-nav h2 {
+	float: left;
+}
+
+#sub-nav li.active, .extra-nav li.active {
+	border-bottom: 1px solid #fff;
+	background: url(/extension/sevenx_digg/design/digg/images/digg/tab-back.png) 100% 0;
+}
+
+#sub-nav li a, #sub-nav li span, .extra-nav li a, .extra-nav li span {
+	display: block;
+	padding: 5px 6px 5px 11px;
+	text-align: center;
+	white-space: nowrap;
+	background: url(/extension/sevenx_digg/design/digg/images/digg/tab-back.png) 0 -200px;
+	text-decoration: none;
+	min-height: 14px; /* fixes FX/Mac issue */
+}
+
+#sub-nav li.active a, #sub-nav li.active span, .extra-nav li.active a, .extra-nav li.active span {
+	background: url(/extension/sevenx_digg/design/digg/images/digg/tab-back.png) 0 0;
+}
+
+#sub-nav li span, .extra-nav li span {
+	color: #000;
+}
+
+#sub-nav li img, .extra-nav li img {
+	vertical-align: middle;
+}
+
+#sub-nav-2 ul, .extra-nav-2 ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#sub-nav-2 ul li, .extra-nav-2 ul {
+	margin: 0;
+	padding: 0 0.1em;
+	border-left: 1px solid #ccc;
+	float: left;
+	position: relative;
+	top: -1.6em;
+}
+
+#sub-nav-2 ul li:first-child, .extra-nav-2 ul li:first-child {
+	border: none;
+}
+
+#sub-nav-2 a, #sub-nav-2 span, .extra-nav-2 ul li:first-child {
+	display: block;
+	font-size: 85%;
+	float: left;
+	padding: 1px 0.6em;
+	margin-top: 2px;
+}
+
+/* Page Numbers */
+.pages {
+    padding: 1em 1em 2em 1em;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    /* clear: left; */
+    /* font-size: 85%; */
+}
+
+.pages a, .pages span {
+    display: block;
+    float: left;
+    padding: 0.2em 1.5em;
+    margin-right: 0.1em;
+    border: 1px solid #fff;
+    background: #fff;
+}
+
+.pages span.current {
+    border: 1px solid #06c;
+    font-weight: bold;
+    background: #06c;
+    color: #fff;
+}
+
+.pages a {
+    border: 1px solid #9AAFE5;
+    text-decoration: none;
+}
+
+.pages a:hover {
+    border-color: #06c;
+}
+
+.pages a.nextprev {
+    font-weight: bold;
+}
+
+.pages span.nextprev {
+    color: #666;
+}
+
+.pages span.nextprev {
+/*        border: 1px solid #ddd; */
+        color: #999;
+}
+
+#diggers .pages {
+        margin-top: 0;
+        height: 1em;
+        border: none;
+        background: url(/extension/sevenx_digg/design/digg/images/digg/underline.png) 0 20px repeat-x;
+}
+
+* html #diggers .pages {
+        position: relative;
+        top: -15px;
+}
+
+#diggers .nextprev {
+        float: right;
+        margin-left: 10px;
+}
+
+/* problem page styles */
+
+body.problem-page h2 {
+	color: #c00;
+}
+/*
+body.problem-page .boxed, body.problem-page .boxed div {
+	background-image: url(/extension/sevenx_digg/design/digg/images/digg/digg-box-problem.gif);
+}
+*/
+/* dropdown menu */
+.sort-bar {
+	white-space: nowrap;
+}
+#dropdownnav {
+    position: absolute;
+    z-index: 1000;
+}
+#dropdownnav, #dropdownnav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font: 11px sans-serif;
+    display: inline;
+}
+a.dropline {
+    white-space: nowrap;
+    display: block;
+    width: 20em;
+    background: none;
+    text-decoration: none;
+    padding: 3px 6px;
+    border-right: 1px solid #59be00;
+    border-left: 1px solid #59be00;
+    color: #59be00;
+    height: 14px;
+    background: #fff url(/extension/sevenx_digg/design/digg/images/digg/drop-border.png) 0 100% no-repeat;
+}
+a.topline {
+    background: url(/extension/sevenx_digg/design/digg/images/digg/down-arrow.png) 100% -100px no-repeat;
+    white-space: nowrap;
+    display: block;
+    width: 20em;
+    color: #390;
+    border: 1px solid #690;
+    text-decoration: none;
+    padding: 3px 6px;
+    height: 14px;
+}
+.droplinelist a:hover {
+    background-color: #E9F5DF;
+    border-right: 1px solid #390;
+    border-left: 1px solid #390;
+    position: relative;
+    color: #390;
+}
+#dropdownnav li {
+    float: left;
+    margin-bottom: 0;
+    width: 20em;
+}
+#dropdownnav li ul li {
+    min-width: 20em;
+}
+#dropdownnav li ul {
+    position: absolute;
+    width: 22em;
+    _width: 22em;
+    min-width: 150px;
+    display: none;
+}
+
+#dropdownnav li:hover ul, #dropdownnav li.sfhover ul {
+    display: block;
+    left: 0;
+    top: 22px;
+}
+
+.tooltip {
+	border: 1px solid #85be35;
+	padding: 5px;
+	background-color: #fff;
+	width: 150px;
+	font-size: 85%;
+	color: #777;
+	opacity: 0.95;
+}
+
+.tooltip h6 {
+	background: #85be35;
+	color: #fff;
+	margin: -5px -5px 4px -5px;
+	padding: 2px 5px;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.tooltip img {
+	vertical-align: middle;
+	border: 1px solid #85be35;
+	margin: 2px 0;
+}
+
+/* search styles */
+
+.search-simple {
+	float: left;
+	margin-right: 10px;
+}
+
+.search-advanced {
+	float: right;
+	margin-right: 10px;
+}
+
+.search-advanced select, .search-simple input {
+	font-size: 85%;
+}
+
+.search-highlight {
+	background-color: #ff0;
+	opacity: 0.7;
+}
+/***** spy styles *****/
+.spy-story {
+	clear: both;
+	border-top: 1px solid #ccc;
+	min-height: 3.3em; /*for the hover*/
+}
+
+.spy-story:hover {
+	background: #E8ECF4;
+}
+
+.spy-actions, .spy-diggcount, .spy-url, .spy-location, .spy-user {
+	float: left;
+	display: block;
+	text-decoration: none;
+}
+
+.spy-story a {
+	padding: 8px 4px 4px 4px;
+}
+
+.spy-header span {
+	padding: 8px 4px 4px 4px;
+}
+
+.spy-header span {
+	font-weight: bold;
+}
+
+.spy-actions {
+	width: 4em;
+	text-align: center;
+}
+
+.spy-diggcount {
+	display: block;
+	width: 3.5em;
+}
+
+.spy-story .spy-url {
+	padding-top: 4px;
+}
+
+.spy-location {
+	float: right;
+	width: 7em;
+}
+
+.spy-user {
+	float: right;
+	width: 8em;
+}
+
+.spy-user img {
+	vertical-align: middle;
+	border: 1px solid #ccc;
+}
+
+a.spy-buried {
+	color: #c00;
+}
+
+#spy a:hover {
+	text-decoration: underline;
+}
+
+#spy-sort {
+	position: absolute;
+	right: 10px;
+	z-index: 200;
+}
+
+.spy-url strong {
+	font-size: 115%;
+}
+
+.spy-url a:hover {
+	text-decoration: none  !important;
+}
+
+.spy-url a:hover strong {
+	text-decoration: underline !important;
+}
+
+.spy-url span {
+	font-size: 80%;
+	color: #999;
+	display: block;
+}
+
+#spy-sort div {
+	position: relative;
+	top: 10px;
+} * html  #spy-sort div { top: 0; }
+
+span.spy-play, a.spy-play, span.spy-pause, a.spy-pause {
+	text-indent: -2000em;
+	background: url(/extension/sevenx_digg/design/digg/images/digg/spy-play.gif) 0 0 no-repeat;
+	display: block;
+	width: 18px;
+	height: 18px;
+	overflow: hidden;
+	text-decoration: none;
+	float: left;
+	margin-right: 2px;
+}
+
+span.spy-pause, a.spy-pause {
+	border-right: 1px solid #ccc; padding-right: 10px; margin-right: 10px;
+}
+
+a.spy-play { background: url(/extension/sevenx_digg/design/digg/images/digg/spy-play.gif) 0 -100px no-repeat; }
+span.spy-pause { background: url(/extension/sevenx_digg/design/digg/images/digg/spy-pause.gif) 0 0 no-repeat; }
+a.spy-pause { background: url(/extension/sevenx_digg/design/digg/images/digg/spy-pause.gif) 0 -100px no-repeat; }
+
+.class-final-1 {
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+	border-color: #cfcfcf;
+}
+.class-final-2 {
+	opacity: 0.6;
+	filter:alpha(opacity=60);
+	border-color: #ddd;
+}
+.class-final-3 {
+	opacity: 0.4;
+	filter:alpha(opacity=40);
+	border-color: #eee;
+}
+.class-final-4 {
+	opacity: 0.2;
+	filter:alpha(opacity=20);
+	border-color: #efefef;
+}
+.class-final-5 {
+	opacity: 0.1;
+	filter:alpha(opacity=10);
+	border: none;
+}
+
+/*
+ Extra Digg Sigma
+*/
+
+#footer {
+    position:relative;
+}
+
+#footer ul {
+  display: flex;
+}
+
+#footer ul li{
+  list-style-type: none;
+}
+
+
+/*
+     FILE ARCHIVED ON 02:51:22 Dec 04, 2005 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 11:15:51 Sep 20, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.411
+  exclusion.robots: 0.027
+  exclusion.robots.policy: 0.021
+  esindex: 0.007
+  cdx.remote: 15.7
+  LoadShardBlock: 208.217 (3)
+  PetaboxLoader3.datanode: 165.843 (4)
+  load_resource: 152.318
+  PetaboxLoader3.resolve: 118.025
+*/

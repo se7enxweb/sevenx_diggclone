@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<software>
+    <metadata>
+        <name>7x DiggClone</name>
+        <version>1.1.0</version>
+        <copyright>Copyright (C) 1999 - 2024 7x</copyright>
+        <license>GNU General Public License</license>
+        <info_url>https://github.com/se7enxweb/sevenx_diggclone</info_url>
+    </metadata>
+</software>
